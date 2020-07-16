@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sc-eureka-server" />
+        <module name="sc-user-provider2" />
+        <module name="sc-user-provider1" />
+        <module name="sc-user-consumer" />
+        <module name="sc-user-comsumerr" />
+        <module name="sc-user-entity" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sc-user-consumer" target="1.8" />
+      <module name="sc-user-consumer-hystrix" target="1.8" />
+      <module name="sc-user-provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sc-eureka-ribbon-parent" options="-parameters" />
+      <module name="sc-eureka-server" options="-parameters" />
+      <module name="sc-user-comsumerr" options="-parameters" />
+      <module name="sc-user-consumer" options="-parameters" />
+      <module name="sc-user-consumer-hystrix" options="-parameters" />
+      <module name="sc-user-entity" options="-parameters" />
+      <module name="sc-user-provider" options="-parameters" />
+      <module name="sc-user-provider1" options="-parameters" />
+      <module name="sc-user-provider2" options="-parameters" />
+    </option>
+  </component>
+</project>
