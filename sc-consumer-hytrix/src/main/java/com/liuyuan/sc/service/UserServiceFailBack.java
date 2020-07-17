@@ -23,8 +23,7 @@ public class UserServiceFailBack implements UserService {
     @Override
     public List<Tuser> getUserList() {
         ArrayList<Tuser> tusers = new ArrayList<>();
-        Tuser tuser = new Tuser();
-        tuser.setName("男");
+        Tuser tuser = new Tuser(20,"adminnn","123123","男");
         tusers.add(tuser);
         return tusers;
     }
