@@ -1,10 +1,12 @@
 package com.liuyuan.sc.service;
 
 import com.liuyuan.sc.Tuser;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class UserServiceFailBack implements UserService {
 
     @Override

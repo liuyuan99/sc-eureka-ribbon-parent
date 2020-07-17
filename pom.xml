@@ -11,6 +11,9 @@
         <module>sc-user-provider1</module>
         <module>sc-user-entity</module>
         <module>sc-consumer-hytrix</module>
+        <module>sc-hystrix-board</module>
+        <module>sc-zuul-app</module>
+        <module>sc-log-provider</module>
     </modules>
 
     <parent>

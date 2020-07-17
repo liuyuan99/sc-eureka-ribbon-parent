@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(name = "scuserprovider",fallback = UserServiceFailBack.class)
+//@FeignClient(name = "scuserprovider",fallback = UserServiceFailBack.class)
+@FeignClient(name = "scuserprovider")
 public interface UserService {
 
     @RequestMapping("/getuser")

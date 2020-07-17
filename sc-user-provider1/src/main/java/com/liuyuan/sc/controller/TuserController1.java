@@ -20,29 +20,16 @@ import java.util.List;
  * @since 2020-07-16
  */
 @RestController
-public class TuserController {
+@RequestMapping("tuser")
+public class TuserController1 {
 
     @Autowired
     ITuserService iTuserService;
 
-    @RequestMapping("getuser")
-    public String getUserNameById(@RequestParam(value = "uid",defaultValue = "")Integer id){
-        return "   username"+id+"@@@@111";
-    }
-
-    @RequestMapping(value = "testlist")
-    public List<String> gets(){
-        ArrayList<String> list = new ArrayList<>();
-        list.add("wahaha111");
-        list.add("xiaoyangren111");
-        return list;
-    }
-
     //查询数据
-    @RequestMapping("ulist")
-    public List<Tuser> getUserList(){
-        List<Tuser> list = iTuserService.list(null);
-        return list;
+    @RequestMapping("a")
+    public String getA(){
+        return "this is A";
     }
 
 

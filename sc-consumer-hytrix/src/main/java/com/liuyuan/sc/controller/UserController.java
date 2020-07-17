@@ -2,6 +2,7 @@ package com.liuyuan.sc.controller;
 
 import com.liuyuan.sc.Tuser;
 import com.liuyuan.sc.service.UserService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,8 +52,17 @@ public class UserController {
     }
 
     @RequestMapping("getUserList")
+    @HystrixCommand(fallbackMethod = "getUserListFailBack")
     public List<Tuser> getUserList(){
         List<Tuser> userlist = userService.getUserList();
         return userlist;
+    }
+
+    /*@RequestMapping("getUserListFailBack")*/
+    public List<Tuser> getUserListFailBack(){
+        ArrayList<Tuser> tusers = new ArrayList<>();
+        Tuser tuser = new Tuser(20,"admin","123456","男");
+        tusers.add(tuser);
+        return tusers;
     }
 }

@@ -1,6 +1,7 @@
 package com.liuyuan.sc.controller;
 
 import com.liuyuan.sc.Tuser;
+import com.liuyuan.sc.service.LogService;
 import com.liuyuan.sc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -34,6 +35,7 @@ public class UserController {
     public String getUserName(@RequestParam(defaultValue = "0")Integer id){
         String name = restTemplate.getForObject("http://scuserprovider/getuser?uid=" + id, String.class);
         System.out.println("this name "+name);
+        logService.log("点了菜品"+name);
         return name;
     }
 
@@ -55,4 +57,10 @@ public class UserController {
         List<Tuser> userlist = userService.getUserList();
         return userlist;
     }
+
+    @Autowired
+    LogService logService;
+
+
+
 }
