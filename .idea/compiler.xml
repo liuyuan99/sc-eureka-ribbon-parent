@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sc-eureka-server" />
+        <module name="sc-consumer-hytrix" />
         <module name="sc-user-provider2" />
         <module name="sc-user-provider1" />
         <module name="sc-user-consumer" />
@@ -22,6 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sc-consumer-hytrix" options="-parameters" />
       <module name="sc-eureka-ribbon-parent" options="-parameters" />
       <module name="sc-eureka-server" options="-parameters" />
       <module name="sc-user-comsumerr" options="-parameters" />

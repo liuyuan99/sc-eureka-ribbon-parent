@@ -36,4 +36,7 @@ public class Tuser implements Serializable {
     private String name;
 
 
+    public Tuser() {
+
+    }
 }

@@ -10,6 +10,7 @@
         <module>sc-user-provider2</module>
         <module>sc-user-provider1</module>
         <module>sc-user-entity</module>
+        <module>sc-consumer-hytrix</module>
     </modules>
 
     <parent>
