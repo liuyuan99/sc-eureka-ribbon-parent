@@ -6,16 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sc-eureka-server" />
         <module name="sc-hystrix-board" />
-        <module name="sc-consumer-hytrix" />
+        <module name="sc-user-comsumerr" />
+        <module name="sc-log-provider" />
+        <module name="sc-config-clientapp" />
+        <module name="sc-zuul-app" />
         <module name="sc-user-provider2" />
         <module name="sc-user-provider1" />
-        <module name="sc-user-comsumerr" />
-        <module name="sc-zuul-app" />
+        <module name="sc-eureka-server" />
         <module name="sc-user-consumer" />
-        <module name="sc-log-provider" />
         <module name="sc-user-entity" />
+        <module name="sc-consumer-hytrix" />
+        <module name="sc-config-bus-client-app" />
+        <module name="sc-config-bus-server-app" />
+        <module name="sc-config-serverApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +30,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sc-config-bus-client-app" options="-parameters" />
+      <module name="sc-config-bus-server-app" options="-parameters" />
+      <module name="sc-config-clientapp" options="-parameters" />
+      <module name="sc-config-serverApp" options="-parameters" />
       <module name="sc-consumer-hytrix" options="-parameters" />
       <module name="sc-eureka-ribbon-parent" options="-parameters" />
       <module name="sc-eureka-server" options="-parameters" />

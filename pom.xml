@@ -14,6 +14,10 @@
         <module>sc-hystrix-board</module>
         <module>sc-zuul-app</module>
         <module>sc-log-provider</module>
+        <module>sc-config-serverApp</module>
+        <module>sc-config-clientapp</module>
+        <module>sc-config-bus-server-app</module>
+        <module>sc-config-bus-client-app</module>
     </modules>
 
     <parent>

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: sc-config-bus-client
+
+server:
+  port: 8114

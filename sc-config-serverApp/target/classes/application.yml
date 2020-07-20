@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+#服务注册中心的配置内容，指定服务注册中心的位置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+    #启用服务消费者从注册中心拉取服务列表的功能
+    fetch-registry: true
+    egister-with-eureka: false
+    #设置服务消费者从注册中心拉取服务列表的间隔
+    registry-fetch-interval-seconds: 30
+
+spring:
+  application:
+    name: sc-config-server
+  cloud:
+    config:
+      server:
+        git:
+          #配置github
+          #spring.cloud.config.server.git.uri = https://github.com/moteinstorm/sc-study/
+          #spring.cloud.config.server.git.search-paths = /config/config
+          # uri:  https://github.com/moteinstorm/sc-cloud-study-config.git
+          uri: https://github.com/liuyuan99/liu-sc-cloud-study-config/
+          #配置搜索目录
+          search-paths:
+            - projecta/configpath/
+      #配置分支
+      label: master

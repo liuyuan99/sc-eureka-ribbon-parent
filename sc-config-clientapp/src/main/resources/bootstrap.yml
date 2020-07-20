@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: sc-config-client
+  cloud:
+    config:
+      #配置中心的地址
+      uri: http://localhost:8888/
+      #指定拉去的dev环境，它与spring.application.name属性才能从Git仓库找到配置文件
+      name: config
+      profile: dev
+      #可以指定拉去配置的Git分支
+      label: master
